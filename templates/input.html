@@ -2,5 +2,7 @@
 {% block title %} Input Page {% endblock %}
 
 {% block content %}
-<p>{{station}}</p>
+{% for message in messages %}
+<p>{{message}}</p>
+{% endfor %}
 {% endblock %}
