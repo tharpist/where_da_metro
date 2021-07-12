@@ -19,9 +19,9 @@ def home():
 def station(station_name):
     station_url = get_station(station_name)
     train_data = fetch_data(station_url)
-    message = send_message(train_data)
-    #return render_template('input.html')
-    return f"<h1>{message}<h1>"
+    messages = send_message(train_data)
+    return render_template('input.html')
+    #return f"<h1>{messages}<h1>"
 
 #default port:
 if __name__ == '__main__':
